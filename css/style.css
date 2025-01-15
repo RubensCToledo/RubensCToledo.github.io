@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --primary-color: #4891ff;
+}
+
+body {
+    font-family: 'Poppins';
+    font-size: 16px;
+    line-height: 1.5;
+    background: #fff;
+
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+
+}
+
+ul {
+    list-style: none;
+
+}
+
+li {
+    margin-bottom: 10px;
+}
+/*img {
+    max-width: 100%;
+    
+}
+*/
+
+/* hero */
+.hero {
+    margin-bottom: 50px;
+}
+
+.hero .container {
+    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
+    background-size: contain;
+    background-position: center bottom;
+    height: 350px;
+}
+
+.hero .hero-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    
+}
+
+.hero .hero-text {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.hero .hero-image img  { 
+    max-width: 100%; 
+    width: 600px;
+    height: auto;
+    border-radius: 50%; /* Makes the image round */
+    
+}
+
+/* CV */
+
+.CV .container {
+    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
+    background-size: contain;
+    background-position: center bottom;
+    height: 1100px;
+}
+
+.CV .CV-content {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 50px;   
+}
+
+.CV .CV-text {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.bullet  {
+    list-style-type: disc; /* Ensure bullets are discs (default) */
+    padding-left: 40px;
+}
+
+/* Publications */
+
+.Publications .container {
+    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
+    background-size: contain;
+    background-position: center bottom;
+    height: 600px;
+}
+
+.Publications .Publications-content {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 50px;   
+}
+
+.Publications .Publications-text {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+/* Projects */
+
+
+.Projects .container {
+    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
+    background-size: contain;
+    background-position: center bottom;
+    height: 600px;
+}
+
+.Projects .Projects-content {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 50px;   
+}
+
+.Projects .Projects-text {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+
+/* Utility navbar */
+.navbar {
+    background: #fff;
+    padding: 20px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .main-menu ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* footer */
+.footer {
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+footer ul li {
+    line-height: 2.5;
+}
+
+.footer a {
+    color: #ccc;
+}
+
+.footer i {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* text classes */
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* background */
+
+.bg-black {
+    background: #000;
+    color: #fff
+}
+

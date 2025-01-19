@@ -76,7 +76,8 @@ li {
     /*background: url('../images/cenario-azul.jpeg') no-repeat; */
     background-size: contain;
     background-position: center bottom;
-    height: 1100px;
+    height: 1250px;
+    width: 70%;
 }
 
 .CV .CV-content {
@@ -102,7 +103,8 @@ li {
     /*background: url('../images/cenario-azul.jpeg') no-repeat; */
     background-size: contain;
     background-position: center bottom;
-    height: 600px;
+    height: 650px;
+    width: 70%;
 }
 
 .Publications .Publications-content {
@@ -117,6 +119,14 @@ li {
     margin-bottom: 30px;
 }
 
+.Publications ul li a {
+    transition: 0.5s;
+}
+
+.Publications ul li a:hover {
+    color: var(--primary-color);
+}
+
 /* Projects */
 
 
@@ -124,7 +134,8 @@ li {
     /*background: url('../images/cenario-azul.jpeg') no-repeat; */
     background-size: contain;
     background-position: center bottom;
-    height: 600px;
+    height: 650px;
+    width: 70%;
 }
 
 .Projects .Projects-content {
@@ -137,6 +148,95 @@ li {
 .Projects .Projects-text {
     width: 90%;
     margin-bottom: 30px;
+}
+
+.Projects h2 a {
+    padding: 10px 0px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.Projects h2 a:hover {
+    color: var(--primary-color);
+}
+
+.Projects p a {
+    transition: 0.5s;
+}
+
+.Projects p a:hover {
+    color: var(--primary-color);
+}
+
+
+/* contact */
+
+.contact .container {
+    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
+    background-size: contain;
+    background-position: center bottom;
+    height: 400px;
+    width: 70%;
+}
+
+.contact .contact-content {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 50px;   
+}
+
+.contact .contact-text {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.contact p a {
+    transition: 0.5s;
+}
+
+.contact p a:hover {
+    color: var(--primary-color);
+}
+
+/* blog */
+
+.blog .container {
+    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
+    background-size: contain;
+    background-position: center bottom;
+    height: 600px;
+    width: 50%;
+}
+
+.blog .blog-content {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 50px;   
+}
+
+.blog .blog-text {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+/* About */
+
+.about .container {
+    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
+    background-size: contain;
+    background-position: center bottom;
+    height: 1650px;
+    width: 80%;
+}
+
+.about .about-content {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 50px;   
 }
 
 
@@ -258,3 +358,16 @@ footer ul li {
     color: #fff
 }
 
+/* card */
+
+.card {
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.testimonials-grid {
+    display: grid;
+    gap: 30px;
+}

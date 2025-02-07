@@ -14,13 +14,24 @@ body {
     font-size: 16px;
     line-height: 1.5;
     background: #fff;
+    
 
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    color: #555
 }
 
 a {
     text-decoration: none;
     color: #333;
+    transition: 0.5s;
 
+}
+
+a:hover {
+    color: var(--primary-color);
 }
 
 ul {
@@ -28,18 +39,64 @@ ul {
 
 }
 
+.bullet {
+    list-style-type: disc; /* Default bullets */
+    list-style-position: inside; /* Keeps bullets inside */
+    padding-left: 1em;
+}
+
 li {
     margin-bottom: 10px;
+
 }
-/*img {
+
+/* imagens */
+img {
     max-width: 100%;
+}
+
+/* h's */
+h1{
+    color: #333;
+    padding-bottom: 1em;
+}
+
+h2 {
+    margin-top: 1em;
+    color: #333; 
+}
+
+h3 {
+    margin-top: 0.8em;
+    padding-top: 0.8em;
+    color: #333;
+}
+
+h4 {
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    color: #333;
+}
+
+p {
+    margin-top: 0.1em;
+    padding-top: 0.1em;
+    text-align: justify;
+}
+
+main {
+    max-width: 50em;
+    margin: 100px auto 0 auto;
     
 }
-*/
+
+/* Project */
+
 
 /* hero */
 .hero {
-    margin-bottom: 50px;
+    margin-bottom: -20px;
+    margin-top: 120px;
 }
 
 .hero .container {
@@ -70,180 +127,16 @@ li {
     
 }
 
-/* CV */
-
-.CV .container {
-    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
-    background-size: contain;
-    background-position: center bottom;
-    height: 1250px;
-    width: 70%;
-}
-
-.CV .CV-content {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    gap: 50px;   
-}
-
-.CV .CV-text {
-    width: 90%;
-    margin-bottom: 30px;
-}
-
-.bullet  {
-    list-style-type: disc; /* Ensure bullets are discs (default) */
-    padding-left: 40px;
-}
-
-/* Publications */
-
-.Publications .container {
-    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
-    background-size: contain;
-    background-position: center bottom;
-    height: 650px;
-    width: 70%;
-}
-
-.Publications .Publications-content {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    gap: 50px;   
-}
-
-.Publications .Publications-text {
-    width: 90%;
-    margin-bottom: 30px;
-}
-
-.Publications ul li a {
-    transition: 0.5s;
-}
-
-.Publications ul li a:hover {
-    color: var(--primary-color);
-}
-
-/* Projects */
-
-
-.Projects .container {
-    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
-    background-size: contain;
-    background-position: center bottom;
-    height: 650px;
-    width: 70%;
-}
-
-.Projects .Projects-content {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    gap: 50px;   
-}
-
-.Projects .Projects-text {
-    width: 90%;
-    margin-bottom: 30px;
-}
-
-.Projects h2 a {
-    padding: 10px 0px;
-    display: block;
-    font-weight: 600;
-    transition: 0.5s;
-}
-
-.Projects h2 a:hover {
-    color: var(--primary-color);
-}
-
-.Projects p a {
-    transition: 0.5s;
-}
-
-.Projects p a:hover {
-    color: var(--primary-color);
-}
-
-
-/* contact */
-
-.contact .container {
-    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
-    background-size: contain;
-    background-position: center bottom;
-    height: 400px;
-    width: 70%;
-}
-
-.contact .contact-content {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    gap: 50px;   
-}
-
-.contact .contact-text {
-    width: 90%;
-    margin-bottom: 30px;
-}
-
-.contact p a {
-    transition: 0.5s;
-}
-
-.contact p a:hover {
-    color: var(--primary-color);
-}
-
-/* blog */
-
-.blog .container {
-    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
-    background-size: contain;
-    background-position: center bottom;
-    height: 600px;
-    width: 50%;
-}
-
-.blog .blog-content {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    gap: 50px;   
-}
-
-.blog .blog-text {
-    width: 90%;
-    margin-bottom: 30px;
-}
-
-/* About */
-
-.about .container {
-    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
-    background-size: contain;
-    background-position: center bottom;
-    height: 1650px;
-    width: 80%;
-}
-
-.about .about-content {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    gap: 50px;   
-}
-
-
 /* Utility navbar */
 .navbar {
+    position: fixed; /* Keeps it visible at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
     background: #fff;
-    padding: 20px;
+    padding: 15px;
+    text-align: center;
+
 }
 
 .navbar .container {
@@ -267,17 +160,22 @@ li {
     color: var(--primary-color);
 }
 
+
 /* footer */
 .footer {
-    padding: 30px 0;
+    width: 100%; /* Full viewport width */
+    position: static;
+    margin-top: 30px;
+
 }
 
 .footer h4 {
     margin-bottom: 10px;
+    color: #fff;
 }
 
 footer ul li {
-    line-height: 2.5;
+    line-height: 1.1;
 }
 
 .footer a {
@@ -297,59 +195,20 @@ footer ul li {
     align-items: center;
 }
 
-/* Utility Classes */
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 15px;
+/* Code stuff */
+code,
+pre {
+  background: #eee;
 }
 
-.container-sm {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 15px;
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
 }
 
-/* text classes */
-.text-xxl {
-    font-size: 3rem;
-    line-height: 1.2;
-    font-weight: 600;
-    margin: 40px 0 20px;
+pre {
+  padding: 1em;
 }
-
-.text-xl {
-    font-size: 2.2rem;
-    line-height: 1.4;
-    font-weight: normal;
-    margin: 40px 0 20px;
-}
-
-.text-lg {
-    font-size: 1.8rem;
-    line-height: 1.4;
-    font-weight: normal;
-    margin: 30px 0 20px;
-}
-
-.text-md {
-    font-size: 1.2rem;
-    line-height: 1.4;
-    font-weight: normal;
-    margin: 20px 0 10px;
-}
-
-.text-sm {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    font-weight: normal;
-    margin: 10px 0 5px;
-}
-
-.text-center {
-    text-align: center;
-}
-
 
 /* background */
 
@@ -362,12 +221,21 @@ footer ul li {
 
 .card {
     background: #000;
-    color: #fff;
     border-radius: 10px;
     padding: 20px;
+    margin-top: 20px;
 }
 
 .testimonials-grid {
     display: grid;
     gap: 30px;
+}
+
+.card h2, .card h3, .card p {
+    color: #fff;
+}
+
+.card p {
+    margin-top: 10px;
+    font-weight: 200;
 }

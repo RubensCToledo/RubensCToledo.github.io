@@ -45,6 +45,17 @@ ul {
     padding-left: 1em;
 }
 
+ol {
+    padding-top: 20px;
+    padding-left: 2em;
+
+}
+
+ol ::marker {
+    font-weight: 400;
+    color: #000000; /* Example color */
+}
+
 li {
     margin-bottom: 10px;
 
@@ -58,7 +69,7 @@ img {
 /* h's */
 h1{
     color: #333;
-    padding-bottom: 1em;
+    
 }
 
 h2 {
@@ -79,8 +90,8 @@ h4 {
 }
 
 p {
-    margin-top: 0.1em;
-    padding-top: 0.1em;
+    
+    padding-top: 1.2em;
     text-align: justify;
 }
 

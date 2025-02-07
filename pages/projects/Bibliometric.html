@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="images/test" type="image/x-icon"/>
   </head>
     
@@ -24,25 +24,25 @@
         <div class="main-menu">
           <ul>
             <li>
-              <a href="../index.html">Home</a>
+              <a href="/index.html">Home</a>
             </li>
             <li>
-              <a href="../pages/CV.html">CV</a>
+              <a href="/pages/CV.html">CV</a>
             </li>
             <li>
-              <a href="../pages/projects.html">Projects</a>
+              <a href="/pages/projects.html">Projects</a>
             </li>
             <li>
-              <a href="../pages/publications.html">Publications</a>
+              <a href="/pages/publications.html">Publications</a>
             </li>
             <li>
-              <a href="../pages/blog.html">Blog</a>
+              <a href="/pages/blog.html">Blog</a>
             </li>
             <li>
-              <a href="../pages/about.html">About me</a>
+              <a href="/pages/about.html">About me</a>
             </li>
             <li>
-              <a href="../pages/contact.html">Contact</a>
+              <a href="/pages/contact.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -51,31 +51,173 @@
     <!-- projects -->
     <main>
       <h2>
-        My Projects
+        Bibliometric Analysis
       </h2>
       <p>
-        Those bellow are projects that I developed thorugh my carrer and I can share here with you.
-        I'll try to include codes, comments and explanations whenever is possible.
-        Feel free to use anything you like but give me some credit! Would be glad to answer anything 
-        related to what is posted here.  
+        The bibliometric analysis is a meta-analysis, that by definition,
+         tries to find conclusion from analysing data. In my case I was trying to 
+         see the metrics of the field of research of my PhD. There are other software 
+         available like VOSviewer that have a ready solution for this type of analysis, 
+         but I wish to conduct some analysis that weren't implemented and decided to develop
+          a code with my wife and a friend, you can check <a href="/backup/Bib_git(1).ipynb">here</a>
+           (I'm aware that part of the code is breaking due to changes in libraries,
+            I might revisit it on future but for now I have no plans to update it) 
+            or the papers that used this code (or the variation one my wife used)
+            <a href="https://www.mdpi.com/1996-1073/16/9/3623">here</a> and 
+            <a href="https://journals.sagepub.com/doi/abs/10.1177/14644207241240048">here</a>.  
       </p>
-      <h2>
-        <a href="..//pages/projects/Bibliometric.html">Bibliometric project</a>
-      </h2>
       <p>
-        This is a meta analysis of academia published data based on the on of my publications 
-        (<a href="https://www.mdpi.com/1996-1073/16/9/3623">DOI</a>). If you can't get enough of this, 
-        lets dive in for some discussion and explanation of the code. 
+        I wish to say that this code was meant to be a work in progress, 
+        which was thought to be an open software to use.
+         However people around me by the time didn't shared the same instusiam on the
+          results and for this reason I stopped after the first version,
+           which didnt come close to a V1.0.
       </p>
-      <h2>
-        <a href="..//pages/projects/DoE.html">Design of Experiments project</a>
-      </h2>
       <p>
-        This is a methodology to better understand and construc good experiments. I've used this code 
-        on my PhD.
+        I believe this analysis is very useful for a begining of any research as it 
+        gives you a broad overview of your research field. In this analysis is possible
+         to indetify the revelant people and works, highlights the promissing journal 
+         used by your peers for your future paper and visualize the topic size and growth.
+      </p>
+      
+      <h3>
+        Pre data treatment
+      </h3>
+      <p>
+        In this situation I wished to review a certain topic and I wanted to get all or 
+        most of the work that was relevant to my research. 
+        I've put togheter two of the largest database on academia: Scopus and Web of Science.
+         The problem with those Databases are the difficulty of filtering the relavant 
+         paper from the batch. Both Databases work with keyword combination that might
+          match with specific areas of a paper. However people are not consistent where
+           to put the information, which if you restric you search you lose information
+            or if you are too broad, you get a lot of information that is not matched
+             with the search. 
+      </p>
+      <p>
+        The pipeline of data treatment follows:
+        <ol>
+          <li>Comparioson of both database and remove equals;</li>
+          <li>Manual scan of the remaining batch to ensure relevancy;</li>
+          <li>Extract of key information relevant to the analysis
+            (Material information, experimental setup and condition, 
+            key finds, year, country, names, citation number recieved, citation made and journal);
+          </li>
+          <li>Treament of language differences, spelling, missing information and such;</li>
+          <li>Results.</li>
+        </ol>        
+      </p>
+
+      <h3>
+        Analysis
+      </h3>
+      <h4>
+        Publications and Citations by Country
+      </h4>
+      <p>
+        The analysis that I wished to make are number of publication per country and their citation:
+      </p>
+      <img src="/images/holder" alt="publication/country">
+      <p>
+        For this analysis every paper attributed a single unit of publication for every country 
+        in the author's name. THe same thing was made with the cumulative citation number,
+         if two author of the same country were present in a peper, only a single unit of 
+         paper number and citation number was used.
+      </p>
+      <p>
+        The main difficulty here was to extract the information of country name due to the
+         inconsistency of some journal, missing information and differences between databases.
+          Also, different spelling of countries and abreviations had do be dealt with.
+      </p>
+      <p>
+        This analysis was tought to help identify which countries produce more paper 
+        (which somewhat translate to how much investment in the fild they have) 
+        and how relevant are the paper produced (number of citation).
+      </p>
+      <h4>
+        Cumulative Documents and Citations by Year
+      </h4>
+      <p>
+        Next analysis was cumulative number of documents and citation per year:
+      </p>
+      <img src="holder" alt="cumaltive documents year">
+      <p>
+        Chalanges here are about the same of the other analysis and went way smoother. 
+        This analysis sought to identify which year have the most relevant work to help 
+        to understand the context of the fild and also to identify technology defining 
+        discovery (if you have few paper in a year and lots of citation, higher chance 
+        of having a pretty important paper there).
+      </p>
+      <p>
+        To highlight the importance of the manual filtering, here is a comparision of
+         same analysis with and without the manual analysis for relevance. 
+         You can see how misleading the analysis become without it:
+      </p>
+      <p>INSERT TABLE</p>
+      <h4>
+        Author Analysis
+      </h4>
+      <p>The next analysis was meant to be a extrapolation of the previous analysis:</p>
+      <img src="holder" alt="Author year citation">
+      <p>
+        This analysis consisted of atribuying citation of every paper to each author and 
+        ranking them. After that the first five first author with the higher number of 
+        citation were ranked and the the previous analysis was conducted for each one of 
+        them as observed on the above figure. The ideia was to identify their most relevant work. 
+        The code also feature the same analysis not taking account the first author and 
+        for the last author as well.
+      </p>
+      <h4>
+        Journal Analysis
+      </h4>
+      <p>This analysis was different analysis of the author, only this time instead of the author
+         I looked to the journal.
+      </p>
+      <img src="holder" alt="journal citation">
+      <p>My goal was to identify what journal have the highest ration of citation/publication. 
+        This result should be used as reference to where to send you paper. 
+        As a researcher you would like to have a good exposition of your work and chosing 
+        the right journal might help people to get to know your work. Eventhoguh there a lot 
+        more to it, this is indead an value guide that you could use to weight your decision.
+      </p>
+
+      <h4>
+        keyword analysis
+      </h4>
+      <p>
+        Which leads us to the next analysis which is which keyword used inside of the 
+        paper that have the higher number of citation.
+      </p>
+      <img src="holder" alt="keyword citation">
+      <p>
+        Instead of journal or author, the citation of each paper were attributed to every 
+        keyword inside the paper. Those keyword for all the database were them ranked and 
+        the result is the image above. Still on the topic of visivility, I have found that 
+        the best way to identify a work in those databases is using keyword or in title, 
+        abstract or keyword field. Eventhough this analysis is limited to the keyword field, 
+        it also server as a termometer to see which keyword your peers are using which you 
+        might want use if you want more visibility.
+      </p>
+      <p>
+        English is the main language of academia, but the majority of the researcher are 
+        not native to the English language. This might leads to different word being used. 
+        Also, a commom thing that I have noticed is the use of acronym which you might have 
+        to pay attention.
+      </p>
+
+      <h4>
+        co-citation web
+      </h4>
+      The last (and coolest) analysis is the co-citation web, where you can verify the 
+      relation of which author is working with author.
+      <img src="holder" alt="web">
+      <p>
+        The final and most visually striking analysis is the co-citation web, 
+        which maps relationships between authors. Unfortunately, 
+        I can’t explain this in detail, as my wife developed this analysis independently.
       </p>
     </main>
-          
+      
    <!--Footer-->
    <footer class="footer bg-black">
     <div class="container">

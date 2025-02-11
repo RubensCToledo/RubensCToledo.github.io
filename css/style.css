@@ -62,8 +62,12 @@ li {
 }
 
 /* imagens */
+
 img {
-    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    max-width: 70%;
+    
 }
 
 /* h's */
@@ -140,7 +144,7 @@ main {
 
 /* Utility navbar */
 .navbar {
-    position: fixed; /* Keeps it visible at the top */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -207,19 +211,8 @@ footer ul li {
 }
 
 /* Code stuff */
-code,
-pre {
-  background: #eee;
-}
 
-code {
-  padding: 2px 4px;
-  vertical-align: text-bottom;
-}
 
-pre {
-  padding: 1em;
-}
 
 /* background */
 

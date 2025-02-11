@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="images/test" type="image/x-icon"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.css" rel="stylesheet">
+
   </head>
     
   <body>
+  
     <nav class="navbar">
       <div class="container">
         <div class="logo">
@@ -59,24 +62,27 @@
          see the metrics of the field of research of my PhD. There are other software 
          available like VOSviewer that have a ready solution for this type of analysis, 
          but I wish to conduct some analysis that weren't implemented and decided to develop
-          a code with my wife and a friend, you can check <a href="/backup/Bib_git(1).ipynb">here</a>
-           (I'm aware that part of the code is breaking due to changes in libraries,
-            I might revisit it on future but for now I have no plans to update it) 
-            or the papers that used this code (or the variation one my wife used)
-            <a href="https://www.mdpi.com/1996-1073/16/9/3623">here</a> and 
-            <a href="https://journals.sagepub.com/doi/abs/10.1177/14644207241240048">here</a>.  
+        a code with my wife and a friend, you can check:
+        </p>
+        <h4><a href="/backup/Bib_git(1).ipynb">Download here</a></h4> 
+        <p>
+          (I'm aware that part of the code is breaking due to changes in libraries,
+          I might revisit it on future but for now I have no plans to update it) 
+          or the papers that used this code (or the variation one my wife used)
+          <a href="https://www.mdpi.com/1996-1073/16/9/3623">here</a> and 
+          <a href="https://journals.sagepub.com/doi/abs/10.1177/14644207241240048">here</a>.  
       </p>
       <p>
         I wish to say that this code was meant to be a work in progress, 
         which was thought to be an open software to use.
-         However people around me by the time didn't shared the same instusiam on the
+         However people around me by the time didn't shared the same enthusiasm on the
           results and for this reason I stopped after the first version,
-           which didnt come close to a V1.0.
+           which didn't come close to a V1.0.
       </p>
       <p>
-        I believe this analysis is very useful for a begining of any research as it 
+        I believe this analysis is very useful for a beginning of any research as it 
         gives you a broad overview of your research field. In this analysis is possible
-         to indetify the revelant people and works, highlights the promissing journal 
+         to identify the relevant people and works, highlights the promising journal 
          used by your peers for your future paper and visualize the topic size and growth.
       </p>
       
@@ -86,24 +92,24 @@
       <p>
         In this situation I wished to review a certain topic and I wanted to get all or 
         most of the work that was relevant to my research. 
-        I've put togheter two of the largest database on academia: Scopus and Web of Science.
+        I've put together two of the largest database on academia: Scopus and Web of Science.
          The problem with those Databases are the difficulty of filtering the relavant 
          paper from the batch. Both Databases work with keyword combination that might
           match with specific areas of a paper. However people are not consistent where
-           to put the information, which if you restric you search you lose information
+           to put the information, which if you restrict you search you lose information
             or if you are too broad, you get a lot of information that is not matched
              with the search. 
       </p>
       <p>
         The pipeline of data treatment follows:
         <ol>
-          <li>Comparioson of both database and remove equals;</li>
+          <li>Comparison of both database and remove equals;</li>
           <li>Manual scan of the remaining batch to ensure relevancy;</li>
           <li>Extract of key information relevant to the analysis
             (Material information, experimental setup and condition, 
-            key finds, year, country, names, citation number recieved, citation made and journal);
+            key finds, year, country, names, citation number received, citation made and journal);
           </li>
-          <li>Treament of language differences, spelling, missing information and such;</li>
+          <li>Treatment of language differences, spelling, missing information and such;</li>
           <li>Results.</li>
         </ol>        
       </p>
@@ -117,21 +123,21 @@
       <p>
         The analysis that I wished to make are number of publication per country and their citation:
       </p>
-      <img src="/images/holder" alt="publication/country">
+      <img src="/images/bibliometric/country_cita.png" alt="publication/country">
       <p>
         For this analysis every paper attributed a single unit of publication for every country 
-        in the author's name. THe same thing was made with the cumulative citation number,
-         if two author of the same country were present in a peper, only a single unit of 
-         paper number and citation number was used.
+        in the author's name. The same thing was made with the cumulative citation number,
+        if two author of the same country were present in a paper, only a single unit of 
+        paper number and citation number was used.
       </p>
       <p>
         The main difficulty here was to extract the information of country name due to the
          inconsistency of some journal, missing information and differences between databases.
-          Also, different spelling of countries and abreviations had do be dealt with.
+          Also, different spelling of countries and abbreviations had do be dealt with.
       </p>
       <p>
-        This analysis was tought to help identify which countries produce more paper 
-        (which somewhat translate to how much investment in the fild they have) 
+        This analysis was thought to help identify which countries produce more paper 
+        (which somewhat translate to how much investment in the field they have) 
         and how relevant are the paper produced (number of citation).
       </p>
       <h4>
@@ -140,30 +146,31 @@
       <p>
         Next analysis was cumulative number of documents and citation per year:
       </p>
-      <img src="holder" alt="cumaltive documents year">
+      <img src="/images/bibliometric/doc-cita_year.png" alt="cumaltive documents year">
       <p>
-        Chalanges here are about the same of the other analysis and went way smoother. 
+        Challenges here are about the same of the other analysis and went way smoother. 
         This analysis sought to identify which year have the most relevant work to help 
-        to understand the context of the fild and also to identify technology defining 
+        to understand the context of the field and also to identify technology defining 
         discovery (if you have few paper in a year and lots of citation, higher chance 
         of having a pretty important paper there).
       </p>
       <p>
-        To highlight the importance of the manual filtering, here is a comparision of
-         same analysis with and without the manual analysis for relevance. 
-         You can see how misleading the analysis become without it:
+        To highlight the importance of the manual filtering, here is a comparison of
+        same analysis with and without the manual analysis for relevance. 
+        You can see how misleading the analysis become without it:
       </p>
-      <p>INSERT TABLE</p>
+      <img src="/images/bibliometric/doc-cita_year.png" alt="doc year citation">
+      <img src="/images/bibliometric/doc-cita_year_comparison.png" alt="doc year citation comparison">
       <h4>
         Author Analysis
       </h4>
       <p>The next analysis was meant to be a extrapolation of the previous analysis:</p>
       <img src="holder" alt="Author year citation">
       <p>
-        This analysis consisted of atribuying citation of every paper to each author and 
+        This analysis consisted of attributing citation of every paper to each author and 
         ranking them. After that the first five first author with the higher number of 
         citation were ranked and the the previous analysis was conducted for each one of 
-        them as observed on the above figure. The ideia was to identify their most relevant work. 
+        them as observed on the above figure. The idea was to identify their most relevant work. 
         The code also feature the same analysis not taking account the first author and 
         for the last author as well.
       </p>
@@ -173,12 +180,12 @@
       <p>This analysis was different analysis of the author, only this time instead of the author
          I looked to the journal.
       </p>
-      <img src="holder" alt="journal citation">
+      <img src="/images/bibliometric/journal-cita.png" alt="journal citation">
       <p>My goal was to identify what journal have the highest ration of citation/publication. 
         This result should be used as reference to where to send you paper. 
         As a researcher you would like to have a good exposition of your work and chosing 
-        the right journal might help people to get to know your work. Eventhoguh there a lot 
-        more to it, this is indead an value guide that you could use to weight your decision.
+        the right journal might help people to get to know your work. Even thoguh there a lot 
+        more to it, this is indeed an value guide that you could use to weight your decision.
       </p>
 
       <h4>
@@ -188,20 +195,20 @@
         Which leads us to the next analysis which is which keyword used inside of the 
         paper that have the higher number of citation.
       </p>
-      <img src="holder" alt="keyword citation">
+      <img src="/images/bibliometric/kw.png" alt="keyword citation">
       <p>
         Instead of journal or author, the citation of each paper were attributed to every 
         keyword inside the paper. Those keyword for all the database were them ranked and 
-        the result is the image above. Still on the topic of visivility, I have found that 
+        the result is the image above. Still on the topic of visibility, I have found that 
         the best way to identify a work in those databases is using keyword or in title, 
-        abstract or keyword field. Eventhough this analysis is limited to the keyword field, 
-        it also server as a termometer to see which keyword your peers are using which you 
+        abstract or keyword field. even though this analysis is limited to the keyword field, 
+        it also server as a thermometer to see which keyword your peers are using which you 
         might want use if you want more visibility.
       </p>
       <p>
         English is the main language of academia, but the majority of the researcher are 
         not native to the English language. This might leads to different word being used. 
-        Also, a commom thing that I have noticed is the use of acronym which you might have 
+        Also, a common thing that I have noticed is the use of acronym which you might have 
         to pay attention.
       </p>
 
@@ -210,13 +217,164 @@
       </h4>
       The last (and coolest) analysis is the co-citation web, where you can verify the 
       relation of which author is working with author.
-      <img src="holder" alt="web">
+      <img src="/images/bibliometric/bang(1).jpeg" alt="web">
       <p>
         The final and most visually striking analysis is the co-citation web, 
         which maps relationships between authors. Unfortunately, 
         I can’t explain this in detail, as my wife developed this analysis independently.
       </p>
+    <h2> How to use the code!</h3>
+    <p>
+      I will try to have a guide like discussion of how to use this code,
+      if you ever need it. This code expect you to have access to SCOPUS and 
+      web of science platform, however you can edit this for any database that
+      have a similar format.
+    </p>
+    <p>
+      After you exported the .csv file with the relevant information for This
+      analysis (which usually is the affiliation, citation, names and etc). You
+      can fire up the code!.
+    </p>
+    <p>First things first, make sure you have all the libraries installed.
+    </p>
+    <pre><code class="language-python">
+      import pandas as pd
+      import numpy as np
+      import re
+      pd.set_option("display.max_rows", None , "display.max_columns", None)
+      from collections import Counter
+      import matplotlib.pyplot as plt
+      from matplotlib import cm
+      from matplotlib.image import NonUniformImage
+    </code></pre>
+    <p>
+      Those are the libraries I have used in my last analysis, you maybe do not
+      need everything that is in there.
+    </p>
+    <p>
+      Okay, first line will be responsible to import your .csv file. Just make
+      sure you don't change the name of the DataFrame (dfs), because it is used
+      for the whole code.
+    </p>
+    <pre><code class="language-python">
+      dfs = pd.read_csv('scopus_manual.csv')
+    </code></pre>
+    <p>
+      Next piece of important code comes right bellow, and this section makes
+      sure I filter all information I don't want. Your .csv file is going to have
+      different information depending of what you select on SCOPUS.
+    </p>
+    <pre><code class="language-python">
+      dfs.drop(columns = ['Author(s) ID','Volume','Issue', 'Art. No.',
+                         'Page start', 'Page end', 'Page count', 'Link',
+                        'Authors with affiliations','Molecular Sequence Numbers',
+                        'Chemicals/CAS', 'Tradenames', 'Manufacturers', 'Editors',
+                        'Funding Details', 'Funding Text 1', 'Funding Text 2', 
+                        'Funding Text 3', 'Sponsors', 'Publisher', 'Conference name',
+                        'Conference date', 'Conference location', 'Conference code',
+                        'Correspondence Address', 'ISSN', 'CODEN','ISBN', 'PubMed ID', 
+                        'Language of Original Document', 'Publication Stage',
+                        'Document Type','EID', 'Abbreviated Source Title'],
+                        inplace = True)
+
+    </code></pre>
+    <p>The next section extract the country information from the affiliation
+      information. If you ever need to take other information from the affiliation
+      section (like cities). Here is where you have to edit:
+    </p>
+    <pre><code class="language-python">
+      for c in range(len(dfs['Affiliations'].values)):  
+        a = dfs['Affiliations'].values[c]
+        x = a.split(';')
+        y = []
+        w.append([])
+        for d in range(len(x)):
+            y.append(x[d].split(', '))
+        for b in range(len(y)):
+            m = y[b][-1]
+            w[c].append(str(m))
+        # ALTERAÇÃO PARA RETIRADA DOS PAÍSES IGUAIS POR SET  
+        for i in range (len(w)):
+            w[i] = list(set(w[i]))
+    </code></pre>
+    <p>
+      The whole WOS section to Merge was made so the SCOPUS and WOS database,
+      should work together. It proved very buggy as those database constantly
+      make modification how they save information and I recommend you to proceed
+      with a single database. 
+    </p>
+    <p>Entering the Bibliometric analysis section you have all the analysis
+      that was developed in this code. I will not comment everything because 
+      most of the code is the same thing applied for a different problem. I will
+      however comment somethings that might give you some headaches in this process.
+      Fortunately, I can save you some pain.
+    </p>
+    <p>This line bellow:    
+    </p>
+    <pre><code class="language-python">
+      for i in range(len(countries_values)):
+        lista_paises=countries_values[i].split(', ')
+        lista_paises=list(map(lambda x: x.replace("England","United Kingdom"),lista_paises))
+    </code></pre>
+    <p>
+      You will going to have 2 main problems from theses databases in my experience:
+      First is the wrong spelling of peoples name, being it a wrong order or letter miss spelling.
+      You will going to find a lot of them in random patterns, which makes it difficult to filter.
+      My recommendation is to have a good manual scan of your file and to correct most of this things.
+      If you are using the same approach as I did, you should have no more than 300 really relevant articles.
+      In my opinions it is easier to have this approach than coding filter for those random mistakes.
+      In the end it was a bad work of the Journal.
+    </p>
+    <P>
+      Anyway, the second problem is the abbreviation of countries. The most common I found
+      was the use of England, United Kingdom, and UK. Be aware for more of this differences, 
+      and in the end, it is up to you how you want to group these problems.
+    </P>
+    <p>
+      Also, work with upper or lower case, not both. Not cool.
+    </p>
+    <pre><code class="language-python">
+      kw = [kw.upper() for kw in kw]
+    </code></pre>
+    <p>
+      This section "Análise das citações dos 5 maiores autores por ano" is composed
+      by three codes that make a similar analysis, but changing how we consider the authors.
+      First case we attribute citation number for every author and then rank them. 
+      Second, only the first author receives the citation and then rank. Last,
+      only the last author receives the citations and finally rank. This is 
+      a matter of choice of how you consider the relevance of the citations. Those
+      three are there so I could understand work that would change the analysis.
+      (beware, some people might be offended with your findings :p) 
+    </p>
+    <p>
+      Last we have the plot sections: Here you find the plots of the previous analysis.
+      You can change the colors changing this value:
+    </p>
+    <pre><code class="language-python">
+      my_cmap = cm.Blues
+      ax1.bar(con_l, con_v, color=colors, edgecolor='Darkgrey')
+    </code></pre>
+    <p>
+      section "Plot em barra por pais por quantidade de publicação por citação"
+      shows the dual y axis plot of countries by number of documents and total citation number
+      (careful, it is wrong the axis saying by year). This analysis was thought 
+      to present the volume of production of each country and how relevant is the 
+      amount of their publication using as merit the number of citation that those 
+      publications have received. This analysis is very interesting because you can 
+      have a ratio of citation/number and conclude how relevant are the publication 
+      of a specific country. It can be also related to the amount of investment a country
+      have in the field. I find it very interesting, sorry if you disagree.  
+    </p>
+    
+    <p>
+
+    </p>
+    <p>
+      The last part: COreferences anlysis artigo, some library update broke it and I didn't 
+      bother fixing it :p. Feel free to ask me anything, glad if you could use and I can help.
+    </p>
     </main>
+
       
    <!--Footer-->
    <footer class="footer bg-black">
@@ -261,5 +419,8 @@
     </div>
    </footer>
   <script src="js/main.js"></script>
+  	
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
 </html>

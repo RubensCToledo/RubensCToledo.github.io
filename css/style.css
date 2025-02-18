@@ -334,7 +334,7 @@ tr:last-child td {
         font-size: 12px;
         line-height: 1.5;
         background: #ffffff;
-        min-height: 100vh;
+        min-height: 95vh;
         display: grid;
         grid-template-rows: auto 1fr;
         overflow: hidden;

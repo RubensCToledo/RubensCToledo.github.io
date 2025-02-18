@@ -222,6 +222,11 @@ footer ul li {
     margin-left: 20px;
 }
 
+.footer-grid img{
+    width: 100px;
+    height: auto;
+    margin-left: 0;
+}
 
 /* background */
 
@@ -284,7 +289,7 @@ tr:last-child td {
 .mobile-menu {
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -500px;
     width: 250px;
     height: 55%;
     z-index: 100;
@@ -345,7 +350,7 @@ tr:last-child td {
     
     .hero {
         margin: 2vh auto 2vh 5vw;
-        
+
     }
     
     .hero .container {

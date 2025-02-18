@@ -9,6 +9,7 @@
     --primary-color: #4891ff;
 }
 
+
 body {
     font-family: 'Poppins';
     font-size: 16px;
@@ -18,11 +19,11 @@ body {
 
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr;
+    
 
     color: #555
 }
-
 a {
     text-decoration: none;
     color: #333;
@@ -40,8 +41,8 @@ ul {
 }
 
 .bullet {
-    list-style-type: disc; /* Default bullets */
-    list-style-position: inside; /* Keeps bullets inside */
+    list-style-type: disc;
+    list-style-position: inside;
     padding-left: 1em;
 }
 
@@ -53,7 +54,7 @@ ol {
 
 ol ::marker {
     font-weight: 400;
-    color: #000000; /* Example color */
+    color: #000000;
 }
 
 li {
@@ -70,8 +71,14 @@ img {
     
 }
 
+.sideimg-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* h's */
-h1{
+h1 {
     color: #333;
     
 }
@@ -101,21 +108,17 @@ p {
 
 main {
     max-width: 50em;
-    margin: 100px auto 0 auto;
+    margin: 30px auto auto auto;
+    
     
 }
 
-/* Project */
-
-
 /* hero */
 .hero {
-    margin-bottom: -20px;
-    margin-top: 120px;
+    margin: 40px auto 0 auto;
 }
 
 .hero .container {
-    /*background: url('../images/cenario-azul.jpeg') no-repeat; */
     background-size: contain;
     background-position: center bottom;
     height: 350px;
@@ -125,17 +128,16 @@ main {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 100px;
     
 }
 
 .hero .hero-text {
     width: 90%;
-    margin-bottom: 20px;
+    
 }
 
 .hero .hero-image img  { 
-    max-width: 100%; 
+    max-width: 80%; 
     width: 600px;
     height: auto;
     border-radius: 50%; /* Makes the image round */
@@ -144,14 +146,16 @@ main {
 
 /* Utility navbar */
 .navbar {
-    position: fixed;
-    top: 0;
+    position: static;
+    top: 0px;
     left: 0;
     width: 100%;
+    height: 60px;
     background: #fff;
-    padding: 15px;
     text-align: center;
 
+    border-bottom: 5px solid #636363;
+    
 }
 
 .navbar .container {
@@ -169,10 +173,17 @@ main {
     display: block;
     font-weight: 600;
     transition: 0.5s;
+    white-space: nowrap;
 }
 
 .navbar ul li a:hover {
     color: var(--primary-color);
+}
+
+.navbar .container .logo img {
+    width: 100px;
+    height: auto;
+    margin-left: 0;
 }
 
 
@@ -208,10 +219,8 @@ footer ul li {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    margin-left: 20px;
 }
-
-/* Code stuff */
-
 
 
 /* background */
@@ -266,6 +275,119 @@ tr:last-child td {
 .widetable {
     font-size: 14px;
     margin: 20px;
-    width: 125%;
-    margin-left: -12.5%;
+    width: 150%;
+    margin-left: -25%;
 }
+
+
+/* hamburguer */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 55%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    border-radius: 5%;
+    margin-top: 8vh;
+
+}
+
+.hamburger-button {
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 0 5vw 0 0;
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: #333;
+    margin: 5px 0px;
+}
+
+.mobile-menu ul li a {
+    font-size: 30;
+
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+/* queries */
+
+@media (max-width: 760px) {
+    body {
+        font-family: 'Poppins';
+        font-size: 12px;
+        line-height: 1.5;
+        background: #ffffff;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        overflow: hidden;
+        max-width: 100vw;
+        color: #555;
+    }
+
+    main {
+        max-width: 100vw;
+        margin: 5vh auto 0 5vw;          
+        
+    }
+    
+    .hero {
+        margin: 2vh auto 2vh 5vw;
+        
+    }
+    
+    .hero .container {
+        height: 350px;
+
+    }
+    
+    .hero .hero-content {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .hero .hero-text {
+        width: 90vw;
+    
+    }
+    
+    .hero .hero-image img  { 
+        max-width: 50%;
+        height: auto;
+        border-radius: 50%;
+        margin-bottom: 2vh;
+        
+    }
+
+    .navbar .main-menu {
+        display: none;
+    }
+    
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+
+
+  }
+
+
+
+  
+

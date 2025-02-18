@@ -20,7 +20,7 @@ After consulting various materials, I identified a sample size that aligns with 
 
 The final design involved 3 parameters at 2 levels each. A total of 8 unique experiments were conducted, with each experiment repeated 3 times, totaling 24 runs. The experimental matrix, including the results, is shown below:
 
-| Sample | Drying time (h) | Vibration intensity (%) | Sieving time (min) | % of mass replicates 1 | % of mass replicates 2 | % of mass replicates 3 | Mean  | s²   |
+| Sample | Drying time (h) | Vibration intensity (%) | Sieving time (min) | % of mass (teste 1)  | % of mass (test 2) | % of mass (test 3) | Mean  | s²   |
 |--------|-----------------|-------------------------|--------------------|------------------------|------------------------|------------------------|-------|------|
 | 1      | 2               | 20                      | 3                  | 55.2                   | 60.6                   | 58.7                   | 58.2  | 7.5  |
 | 2      | 24              | 20                      | 3                  | 58.1                   | 54.5                   | 51.5                   | 54.7  | 11.1 |

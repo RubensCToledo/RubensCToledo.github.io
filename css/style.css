@@ -350,14 +350,13 @@ tr:last-child td {
     
     .hero {
         margin: 2vh auto 2vh 5vw;
+        display: flex;
 
     }
     
-
-    
     .hero .hero-content {
         width: 90vw;
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         align-items: center;
         justify-content: center;

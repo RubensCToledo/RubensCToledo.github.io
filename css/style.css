@@ -304,7 +304,7 @@ tr:last-child td {
     top: 0;
     right: -500px;
     width: 250px;
-    height: 40%;
+    height: 380px;
     z-index: 100;
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -400,6 +400,10 @@ tr:last-child td {
         display: block;
     }
 
+    .footer {
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+    
     .footer-grid {
         display: none;
     }

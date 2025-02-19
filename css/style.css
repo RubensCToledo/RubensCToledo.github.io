@@ -401,9 +401,9 @@ tr:last-child td {
     }
 
     .footer {
-        padding-bottom: env(safe-area-inset-bottom, 20px);
+        padding-bottom: env(safe-area-inset-bottom);
     }
-    
+
     .footer-grid {
         display: none;
     }

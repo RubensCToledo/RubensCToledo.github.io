@@ -353,8 +353,9 @@ tr:last-child td {
     }
 
     main {
-        max-width: 100vw;
-        padding: 5vh auto 0 5vw;          
+        max-width: 90vw;
+        margin: 0px auto;
+        padding-bottom: 5vh;          
         
     }
     

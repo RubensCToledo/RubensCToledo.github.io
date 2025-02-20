@@ -347,7 +347,6 @@ tr:last-child td {
         min-height: 100vh;
         display: grid;
         grid-template-rows: auto 1fr;
-        overflow: hidden;
         max-width: 100vw;
         color: #555;
     }

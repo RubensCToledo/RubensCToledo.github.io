@@ -362,7 +362,7 @@ tr:last-child td {
         margin: 2vh auto 2vh 5vw;
         display: flex;
         padding-bottom: 10vh;
-        flex-grow: 1;
+        /* flex-grow: 1; */
 
     }
     

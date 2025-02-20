@@ -108,7 +108,8 @@ p {
 
 main {
     max-width: 50em;
-    margin: 30px auto auto auto;
+    margin: 0px auto;
+    padding-bottom: 5vh;
     
     
 }
@@ -191,12 +192,12 @@ main {
 .footer {
     width: 100%; /* Full viewport width */
     position: static;
-    margin-top: 30px;
+    padding-top: 1vh;
 
 }
 
 .footer h4 {
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     color: #fff;
 }
 
@@ -209,8 +210,8 @@ footer ul li {
 }
 
 .footer i {
-    font-size: 1.5em;
-    margin-right: 10px;
+    font-size: 2.5em;
+    padding-right: 40px;
 }
 
 .footer-grid {
@@ -219,14 +220,9 @@ footer ul li {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
-.footer-grid img{
-    width: 100px;
-    height: auto;
-    margin-left: 0;
-}
 
 .footer-icons {
     display: none;
@@ -234,7 +230,7 @@ footer ul li {
     justify-content: center;
     align-items: center;
     gap: 15vw;
-    margin: 4vh auto;
+    padding: 4vh auto;
 }
 
 .footer-icons i {
@@ -267,7 +263,7 @@ footer ul li {
 }
 
 .card p {
-    margin-top: 10px;
+    padding-top: 10px;
     font-weight: 200;
 }
 

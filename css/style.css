@@ -229,7 +229,7 @@ footer ul li {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    gap: 10vw;
+    gap: 5vw;
     padding: 4vh auto;
 }
 

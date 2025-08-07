@@ -259,12 +259,16 @@ footer ul li {
 }
 
 .card h2, .card h3, .card p {
-    color: #fff;
+    color: #f0f0f0;
 }
 
 .card p {
-    padding-top: 10px;
+    /*padding-top: 30px;*/
     font-weight: 200;
+    text-indent: 50px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
 }
 
 

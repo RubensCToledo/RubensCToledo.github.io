@@ -91,10 +91,29 @@
          but I wish to conduct some analysis that weren't implemented and decided to develop
         a code with my wife and a friend, you can check:
         </p>
-        <a href="https://raw.githubusercontent.com/RubensCToledo/RubensCToledo.github.io/refs/heads/main/backup/Bib_git(1).ipynb" download>
+        <a href="#" onclick="forceDownload(event)">
         <h4>Download here</h4>
         </a>
-        <p>
+
+        <script>
+        function forceDownload(e) {
+           e.preventDefault();
+          const url = 'https://raw.githubusercontent.com/RubensCToledo/RubensCToledo.github.io/main/backup/Bib_git(1).ipynb';
+    
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = 'Bib_git.ipynb'; // This sets the filename
+                    link.click();
+                })
+                .catch(() => {
+                    // Fallback if the script fails: open the raw link
+                    window.location.href = url;
+                });
+        }
+</script>
           (I'm aware that part of the code is breaking due to changes in libraries,
           I might revisit it on future but for now I have no plans to update it) 
           or the papers that used this code (or the variation one my wife used)

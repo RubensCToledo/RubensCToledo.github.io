@@ -472,7 +472,31 @@
     <p>
       The code example can be found bellow.
     </p>
-    <h4><a href="/backup/CCD_example.ipynb">Download here</a></h4>
+    
+
+     <a href="#" onclick="forceDownload(event)">
+        <h4>Download here</h4>
+        </a>
+
+        <script>
+        function forceDownload(e) {
+           e.preventDefault();
+          const url = 'https://raw.githubusercontent.com/RubensCToledo/RubensCToledo.github.io/main/backup/CCD_example.ipynb';
+    
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => {
+                    const link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = 'Bib_git.ipynb'; // This sets the filename
+                    link.click();
+                })
+                .catch(() => {
+                    // Fallback if the script fails: open the raw link
+                    window.location.href = url;
+                });
+        }
+        </script>
 
     <p>
       It is possible to use an ANOVA to find also the relevant parameters and their combination:
